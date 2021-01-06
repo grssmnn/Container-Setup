@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  reverse:
+    container_name: nginx
+    hostname: nginx
+    image: nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./config:/etc/nginx
+      - ./data/ssl:/etc/ssl/private
+      - ./log:/var/log/nginx
+    network_mode: host

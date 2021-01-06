@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+  registry:
+    container_name: registry
+    restart: always
+    image: registry:latest
+    volumes:
+      - ./config/default/config.yml:/etc/docker/registry/config.yml:ro
+      - ./data:/var/lib/registry:rw
+    networks:
+      network:
+        ipv4_address: 172.21.0.2
+
+networks:
+  network:
+    ipam:
+      config:
+        - subnet: 172.21.0.0/24
