@@ -1,0 +1,18 @@
+version: "3.3"
+services:
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mqtt
+    restart: always
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    networks:
+      network:
+        ipv4_address: 172.25.0.2
+
+networks:
+  network:
+    ipam:
+      config:
+        - subnet: 172.25.0.0/24

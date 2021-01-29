@@ -9,3 +9,4 @@ Setup for some docker containers running on my NAS.
 | Docker Registry | [registry.home](http://registry.home) | 172.22.0.2 |
 | Mayan EDMS      | [docs.home](http://docs.home)         | 172.23.0.2 |
 | Mealie          | [mealie.home](http://mealie.home)     | 172.24.0.2 |
+| MQTT            | -                                     | 172.25.0.2 |
